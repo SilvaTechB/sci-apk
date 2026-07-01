@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "lIM9Vnn3eHzl2WF373Ji7"
+uri = "file://Sci_Archive_Documentation.docx"
+type = "word_document"
+title = "Sci Archive — Documentation"
