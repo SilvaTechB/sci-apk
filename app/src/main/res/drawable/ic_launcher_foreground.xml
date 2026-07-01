@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- "S" lettermark for Sci Archive -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,28 C42,28 34,34 34,43 C34,52 40,56 54,59 C68,62 74,66 74,75 C74,84 66,90 54,90 C42,90 34,84 34,75"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:fillAlpha="0" />
+</vector>

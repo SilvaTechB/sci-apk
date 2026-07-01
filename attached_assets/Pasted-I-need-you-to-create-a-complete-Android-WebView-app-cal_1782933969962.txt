@@ -1,0 +1,269 @@
+I need you to create a complete Android WebView app called "Sci Archive" that loads https://sci.silvatech.co.ke/. Please generate ALL the necessary files with complete code.
+
+Project Requirements:
+App Name: Sci Archive
+
+Package Name: ke.co.silvatech.sciarchive
+
+Minimum SDK: API 21 (Android 5.0)
+
+Target SDK: API 34
+
+Language: Java
+
+Build System: Gradle with Kotlin DSL (.kts files)
+
+Features Needed:
+Full-screen WebView loading the website
+
+Internet permission
+
+Progress bar showing loading status
+
+Pull to refresh functionality (SwipeRefreshLayout)
+
+Error handling for no internet connection with retry button
+
+Back button navigation (go back through web history)
+
+State preservation on screen rotation
+
+JavaScript enabled
+
+Zoom controls enabled
+
+Material Design theme with purple accent
+
+Files to Generate:
+1. AndroidManifest.xml
+Location: app/src/main/AndroidManifest.xml
+
+Add internet permission
+
+Add network state permission
+
+MainActivity as launcher
+
+Add configChanges for orientation
+
+2. activity_main.xml
+Location: app/src/main/res/layout/activity_main.xml
+
+SwipeRefreshLayout wrapper
+
+WebView inside RelativeLayout
+
+Horizontal ProgressBar at top
+
+Error layout with:
+
+Alert icon
+
+"No Internet Connection" text
+
+"Please check your internet connection" subtext
+
+Retry button
+
+3. MainActivity.java
+Location: app/src/main/java/ke/co/silvatech/sciarchive/MainActivity.java
+
+Full WebView configuration
+
+JavaScript enabled
+
+WebViewClient with shouldOverrideUrlLoading
+
+WebChromeClient for progress bar
+
+SwipeRefreshLayout listener
+
+Network connectivity check
+
+Error handling with retry
+
+Back button override
+
+onSaveInstanceState and onRestoreInstanceState
+
+4. strings.xml
+Location: app/src/main/res/values/strings.xml
+
+App name: "Sci Archive"
+
+5. colors.xml
+Location: app/src/main/res/values/colors.xml
+
+Purple theme colors
+
+Basic colors (black, white)
+
+6. themes.xml
+Location: app/src/main/res/values/themes.xml
+
+Theme.SciArchive theme
+
+7. build.gradle.kts (Module: app)
+Location: app/build.gradle.kts
+
+Use Java 8
+
+Add SwipeRefreshLayout dependency
+
+Proper Android configuration
+
+Namespace: ke.co.silvatech.sciarchive
+
+8. settings.gradle.kts
+Location: settings.gradle.kts
+
+Repository configuration
+
+9. gradle.properties
+Location: gradle.properties
+
+JVM arguments
+
+AndroidX enabled
+
+Please provide complete, ready-to-copy code for all files. No placeholders - give me the actual working code that I can directly paste into Android Studio.
+
+PROMPT END
+Once AI Gives You the Code, Here's How to Set Up in Android Studio:
+Step 1: Create New Project
+Open Android Studio
+
+Click New Project
+
+Select Empty Views Activity
+
+Configure:
+
+Name: SciArchive
+
+Package name: ke.co.silvatech.sciarchive
+
+Language: Java
+
+Minimum SDK: API 21
+
+Build configuration language: Kotlin DSL
+
+Click Finish
+
+Wait for the project to build
+
+Step 2: Replace Files with AI-Generated Code
+Replace these files:
+text
+📁 app/src/main/
+   ├── 📄 AndroidManifest.xml          ← Replace with AI code
+   ├── 📁 res/
+   │   ├── 📁 layout/
+   │   │   └── 📄 activity_main.xml    ← Replace with AI code
+   │   └── 📁 values/
+   │       ├── 📄 strings.xml          ← Replace with AI code
+   │       ├── 📄 colors.xml           ← Replace with AI code
+   │       └── 📄 themes.xml           ← Replace with AI code
+   ├── 📁 java/ke/co/silvatech/sciarchive/
+   │   └── 📄 MainActivity.java        ← Replace with AI code
+   └── 📄 build.gradle.kts             ← Replace with AI code
+
+📁 gradle/
+   └── 📄 gradle.properties            ← Replace with AI code
+
+📄 settings.gradle.kts                 ← Replace with AI code
+Step 3: Quick Commands in Android Studio
+If MainActivity.java doesn't exist:
+Right-click on ke.co.silvatech.sciarchive package
+
+New → Java Class
+
+Name: MainActivity
+
+Paste AI code
+
+If layout folder doesn't exist:
+Right-click on res folder
+
+New → Directory
+
+Name: layout
+
+Right-click layout → New → Layout Resource File
+
+Name: activity_main
+
+Paste AI code
+
+Step 4: Sync and Build
+Click Sync Now when prompted
+
+After sync, go to Build → Clean Project
+
+Then Build → Rebuild Project
+
+If no errors, click Run (green triangle)
+
+Step 5: If You Get Errors
+Error: "Cannot resolve symbol R"
+Fix: Build → Clean Project → Rebuild Project
+
+Error: "MainActivity is not abstract"
+Fix: Make sure your MainActivity extends AppCompatActivity
+
+Error: "SwipeRefreshLayout cannot be resolved"
+Fix: Add this to app/build.gradle.kts:
+
+kotlin
+implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+Error: "Missing internet permission"
+Fix: Make sure this is in AndroidManifest.xml:
+
+xml
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+Complete Project Structure After Setup:
+text
+SciArchive/
+├── app/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── AndroidManifest.xml          ✅
+│   │   │   ├── java/
+│   │   │   │   └── ke/co/silvatech/sciarchive/
+│   │   │   │       └── MainActivity.java    ✅
+│   │   │   ├── res/
+│   │   │   │   ├── layout/
+│   │   │   │   │   └── activity_main.xml    ✅
+│   │   │   │   └── values/
+│   │   │   │       ├── colors.xml           ✅
+│   │   │   │       ├── strings.xml          ✅
+│   │   │   │       └── themes.xml           ✅
+│   │   │   └── build.gradle.kts             ✅
+│   ├── gradle/
+│   │   └── gradle.properties                ✅
+│   └── settings.gradle.kts                  ✅
+Testing Checklist:
+App installs on device/emulator
+
+Splash shows (if implemented) or app launches
+
+Website loads correctly
+
+Progress bar shows during loading
+
+Pull to refresh works
+
+Back button navigates back
+
+No internet shows error screen
+
+Retry button works
+
+Rotating screen preserves state
+
+App name is "Sci Archive"
+
+This prompt should generate everything you need. Just copy-paste the AI's code into the respective files in Android Studio and run!
+
